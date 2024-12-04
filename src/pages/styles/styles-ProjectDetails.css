@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container for Project details and epics */
+.container-project {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 5px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.h3-loading {
+    text-align: center;
+}
+
+/* Project details */
+.project-details {
+    margin-bottom: 40px;
+}
+
+
+h3 {
+    color: #17a2b8;
+}
+
+.project-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.project-property {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.project-owner-name {
+    text-align: center;
+    color: #007bff;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+/* Epics list */
+.project-epics ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-epics ul li {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-epics ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.epic-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.epic-card-description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+.h1-detalles {
+    font-size: 1.7em;
+}
+
+.project-members {
+    margin-top: 20px;
+}
+
+.h3-miembros {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #17a2b8;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.member-list {
+    list-style: none;
+    padding: 0;
+}
+
+.member-item {
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    border-radius: 7px;
+    margin-bottom: 5px;
+}
+
+.h3-epicas {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #17a2b8;
+}
+
+@media (max-width:1500px) {
+    .container-project {
+        margin: 5px 25px;
+    }
+}

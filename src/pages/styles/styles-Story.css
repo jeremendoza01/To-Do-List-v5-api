@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Noto+Sans:wght@100;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-story {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: #17a2b8;
+}
+
+p {
+    padding-top: 5px;
+    font-size: 1rem;
+    margin: 0 0 10px;
+}
+
+.div-property,
+.div-data-story,
+.div-users {
+    display: flex;
+    flex-direction: column;
+    background-color: #e9ecef;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.h3-historia {
+    border-bottom: 2px solid #17a2b8;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.p-estado {
+    margin-top: 10px;
+    font-size: 1.05em;
+}
+
+.text-propietario,
+.text-fecha,
+.text-users {
+    font-size: 1.1em;
+}
+
+.text-propietario {
+    margin-bottom: 10px;
+}
+
+.button-add-task {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #17a2b8;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-add-task:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+}
+
+.button-add-task:active {
+    background-color: #117a8b;
+    transform: translateY(0);
+}
+
+.button-add-task:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.5);
+}
+
+.h1-detalles {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.4em;
+}
+
+.h2-name {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.p-descripcion {
+    font-size: 1em;
+}
+
+.div-historia {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-add-task {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.h3-addtask {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.input-addtask,
+.description-addtask {
+    font-family: "Noto Sans", sans-serif;
+    width: 100%;
+    /* Ajustarse al contenedor */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    /* Incluye el padding y el borde en el ancho total */
+}
+
+.input-addtask:focus,
+.description-addtask:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.div-btn-add-task {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* Asegurarse de que el contenedor use todo el ancho disponible */
+    margin: 10px 0;
+    /* Espaciado vertical alrededor del div */
+}
+
+.button-submit-task,
+.button-cancel-task {
+    flex: 1;
+    /* Los botones ocuparán el mismo espacio */
+    margin: 0 5px;
+    /* Espacio entre los botones */
+    padding: 10px;
+    border-radius: 4px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    transition: background-color 0.3s;
+    /* Transición suave para el fondo */
+}
+
+.button-submit-task {
+    background-color: #007BFF;
+    /* Color de fondo del botón de guardar */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+}
+
+.button-cancel-task {
+    background-color: #dc3545;
+    /* Color de fondo del botón de cancelar */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+}
+
+.button-submit-task:hover {
+    background-color: #0056b3;
+    /* Color al pasar el mouse */
+}
+
+.button-cancel-task:hover {
+    background-color: #c82333;
+    /* Color al pasar el mouse */
+}
+
+.form-edit-task {
+    background-color: #f9f9f9;
+    /* Color de fondo suave */
+    border: 1px solid #ddd;
+    /* Borde sutil */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espaciado interno */
+    max-width: 400px;
+    /* Ancho máximo del formulario */
+    margin: 20px auto;
+    /* Centrado en la página */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para profundidad */
+}
+
+.h3-edittask {
+    font-size: 1.5rem;
+    /* Tamaño de fuente más grande */
+    margin-bottom: 15px;
+    /* Espaciado inferior */
+    color: #333;
+    /* Color del texto */
+    text-align: center;
+    /* Centrar texto */
+}
+
+.input-edittask,
+.description-edittask {
+    width: 90%;
+    /* Ocupa todo el ancho */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 15px;
+    /* Espaciado inferior entre campos */
+    border: 1px solid #ccc;
+    /* Borde sutil */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    font-size: 1rem;
+    /* Tamaño de fuente */
+}
+
+.input-edittask:focus,
+.description-edittask:focus {
+    border-color: #4a90e2;
+    /* Color del borde en foco */
+    outline: none;
+    /* Sin contorno */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    /* Sombra en foco */
+}
+
+.div-btn-edit-task {
+    display: flex;
+    /* Flexbox para alinear botones */
+    justify-content: space-between;
+    /* Espacio entre botones */
+}
+
+.button-submit-edit-task,
+.button-cancel-edit-task {
+    padding: 10px 15px;
+    /* Espaciado interno de los botones */
+    font-size: 1rem;
+    /* Tamaño de fuente */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor de mano */
+    transition: background-color 0.3s ease;
+    /* Transición suave al cambiar el fondo */
+}
+
+.button-submit-edit-task {
+    background-color: #007BFF;
+    /* Color de fondo del botón "Guardar" */
+    color: white;
+    transition: all 0.2s ease;
+    /* Color del texto */
+}
+
+.button-submit-edit-task:hover {
+    background-color: #0366bd;
+    transform: translateY(-2px);
+    /* Color de fondo al pasar el mouse */
+}
+
+.button-cancel-edit-task {
+    background-color: #c82333;
+    /* Color de fondo del botón "Cancelar" */
+    color: white;
+    transition: all 0.2s ease;
+    /* Color del texto */
+}
+
+.button-cancel-edit-task:hover {
+    transform: translateY(-2px);
+    background-color: #af1b0b;
+    /* Color de fondo al pasar el mouse */
+}
+
+
+@media (max-width: 600px) {
+
+    .input-addtask,
+    .description-addtask {
+        font-size: 14px;
+        /* Reducir tamaño de fuente en pantallas pequeñas */
+        padding: 8px;
+        /* Ajustar padding para pantallas pequeñas */
+    }
+
+    .button-submit-task,
+    .button-cancel-task {
+        font-size: 14px;
+        /* Reducir tamaño de fuente en pantallas pequeñas */
+        padding: 8px;
+        /* Ajustar padding para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 1300px) {
+    .container-story {
+        margin: 0 30px;
+        /* Ajustar el margen para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 420px) {
+    .details-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div-historia {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.div-login {
+    display: flex;
+    justify-content: center;
+    /* Centrar el formulario */
+    align-items: center;
+    /* Alineación vertical centrada */
+    flex-direction: column;
+    font-family: "Noto Sans", sans-serif;
+    /* Apilar elementos verticalmente */
+}
+
+/* El resto de tu CSS permanece igual */
+
+.form {
+    display: flex;
+    margin-top: 5em;
+    flex-direction: column;
+    /* width: 400px; */
+    /* Ancho del formulario */
+    padding: 60px 80px;
+    /* Espaciado interno generoso */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: box-shadow 0.3s ease;
+    /* Transición suave para la sombra */
+}
+
+/* Efecto de elevación al pasar el mouse */
+.form:hover {
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+    /* Efecto de sombra al pasar el mouse */
+}
+
+.div-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Estilo del título */
+.h1-inicio {
+    font-size: 1.5em;
+    /* Tamaño de fuente del título */
+    color: #333;
+    /* Color oscuro para el título */
+    text-align: center;
+    /* Centrando el título */
+    margin-bottom: 50px;
+    /* Espaciado inferior */
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    /* font-weight: bold; */
+    color: #555;
+    /* Color más suave para las etiquetas */
+    text-align: center;
+    /* Centrando las etiquetas */
+}
+
+/* Estilo de los campos de entrada */
+.input {
+    padding: 12px;
+    /* Espaciado interno */
+    /* width: 100%; */
+    /* Ancho completo */
+    margin: 10px 0;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    border: 1px solid #ddd;
+    /* Borde suave */
+    font-size: 1rem;
+    /* Tamaño de fuente adecuado */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transiciones para el borde y la sombra */
+}
+
+/* Efecto de enfoque */
+.input:focus {
+    border-color: #007bff;
+    /* Color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Sombra al enfocar */
+    outline: none;
+    /* Sin contorno */
+}
+
+/* Estilo del mensaje de error */
+.error {
+    color: red;
+    /* Color rojo */
+    margin-bottom: 15px;
+    /* Espacio inferior */
+    font-size: 1.1em;
+    /* Tamaño de fuente adecuado */
+    text-align: center;
+    /* Centrando el mensaje de error */
+}
+
+/* Estilo del botón de envío */
+.button-submit {
+    padding: 12px;
+    /* Espaciado interno */
+    margin-top: 15px;
+    /* Espaciado superior */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    border: none;
+    /* Sin borde */
+    background-color: #4CAF50;
+    /* Color verde atractivo */
+    color: white;
+    /* Color del texto */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar */
+    transition: background-color 1s ease, transform 1s;
+    /* Transiciones suaves */
+    width: 100%;
+    /* Ancho completo */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.button-submit:hover {
+    background-color: #45a049;
+    /* Color más oscuro al pasar el mouse */
+    /* transform: translateY(-2px); */
+    /* Efecto de elevación al pasar */
+}
+
+/* Efecto de "clic" al presionar */
+.button-submit:active {
+    transform: scale(0.95);
+    /* Efecto de "clic" al presionar */
+}
+
+/* Encabezado de la aplicación */
+.App-header {
+    background-color: #343a40;
+    /* Color de fondo del encabezado */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    color: white;
+    /* Color del texto */
+    display: flex;
+    /* Flexbox para disposición */
+    justify-content: space-between;
+    /* Espaciado entre elementos */
+    align-items: center;
+    /* Centrando verticalmente */
+}
+
+/* Contenedor del encabezado */
+.div-header {
+    display: flex;
+    /* Flexbox para disposición */
+    justify-content: space-between;
+    /* Espaciado entre elementos */
+    align-items: center;
+    /* Centrando verticalmente */
+    width: 100%;
+    /* Ancho completo */
+}
+
+@media (max-width:460px) {
+    .form {
+        padding: 60px 50px;
+        margin: 60px 25px;
+    }
+}

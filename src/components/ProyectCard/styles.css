@@ -1,0 +1,76 @@
+/* styles.css */
+.div-projects-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    /* padding: 10px; */
+    min-width: 25em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.link-project {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.card-project {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-project h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.card-project:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* styles-MyProjects.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.h2-projects {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button.button-submit {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button.button-submit:hover {
+    background-color: #45a049;
+}
+
+.input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 550px) {
+    .div-projects-card {
+        min-width: 20em;
+    }
+}

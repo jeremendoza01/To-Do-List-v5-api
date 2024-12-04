@@ -1,0 +1,10 @@
+.icon-home {
+    font-size: 1.6em;
+    text-decoration: none;
+    color: aliceblue;
+    transition: all 0.2s ease;
+}
+
+.icon-home:hover {
+    color: rgb(23, 162, 184);
+}

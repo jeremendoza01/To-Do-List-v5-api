@@ -1,0 +1,49 @@
+/* Contenedor principal de las historias */
+.div-historias {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título de la página */
+.div-historias h1 {
+    font-size: 1.8rem;
+    color: #17a2b8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Mensaje de carga */
+.div-historias p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Estilos para las tarjetas de historias */
+.story-card {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    overflow: hidden;
+    /* Evita que el contenido sobresalga del div */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos al final si el texto es demasiado largo */
+    white-space: normal;
+    /* Mantiene el texto en una sola línea */
+}
+
+
+.story-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.div-storys {
+    padding-top: 15px;
+}

@@ -1,0 +1,138 @@
+/* styles/styles-Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f7fafc;
+    /* Color de fondo suave */
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 1.8rem;
+    font-family: "Noto Sans", sans-serif;
+    /* Título principal */
+    font-weight: bold;
+    color: #1a202c;
+    /* Color del texto */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    /* Subtítulo */
+    font-family: "Noto Sans", sans-serif;
+
+    color: #4a5568;
+    /* Color del texto */
+    margin-top: 0.5rem;
+}
+
+.features-grid {
+    font-family: "Noto Sans", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    /* Espaciado entre tarjetas */
+    width: 100%;
+    max-width: 1200px;
+    /* Ancho máximo para la cuadrícula */
+}
+
+.feature-card {
+    background-color: white;
+    /* Color de fondo de la tarjeta */
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra de la tarjeta */
+    transition: all 0.3s ease;
+    /* Transiciones suaves */
+    position: relative;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    /* Aumenta el tamaño al pasar el ratón */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra al pasar el ratón */
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    /* Tamaño del título de la tarjeta */
+    font-weight: 600;
+    /* Peso del texto */
+    margin-bottom: 12px;
+    text-align: center;
+    color: #1a202c;
+    /* Color del texto */
+}
+
+.feature-description {
+    font-size: 1rem;
+    /* Tamaño de la descripción */
+    color: #4a5568;
+    /* Color del texto */
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.feature-stats {
+    font-size: 0.875rem;
+    /* Tamaño de las estadísticas */
+    color: #3182ce;
+    /* Color de las estadísticas */
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #2d3748;
+    /* Color de fondo del pie de página */
+    color: white;
+    /* Color del texto */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Permite que el contenido del pie de página se ajuste */
+    max-width: 1200px;
+    /* Ancho máximo para el contenido */
+    margin: 0 auto;
+    /* Centra el contenido */
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    /* Tamaño de los títulos del pie de página */
+    margin-bottom: 0.5rem;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    /* Tamaño del texto del pie de página */
+    color: #cbd5e0;
+    /* Color del texto */
+    margin: 0.25rem 0;
+    /* Espaciado entre los textos */
+}

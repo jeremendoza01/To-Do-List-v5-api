@@ -1,0 +1,36 @@
+.resource-card {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.resource-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.resource-title {
+    font-size: 1.25rem;
+    color: #2b7a78;
+    margin: 0;
+}
+
+.resource-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.resource-link {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resource-link:hover {
+    color: #005a99;
+}

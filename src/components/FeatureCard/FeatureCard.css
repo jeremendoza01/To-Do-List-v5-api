@@ -1,0 +1,62 @@
+.feature-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.feature-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2b7a78;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.feature-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.feature-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+}
+
+/* Animación de rebote */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.feature-card.visible {
+    animation: bounceIn 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 15px;
+    }
+}

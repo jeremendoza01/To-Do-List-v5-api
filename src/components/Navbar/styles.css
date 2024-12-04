@@ -1,0 +1,166 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+}
+
+.App-header {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-evenly;
+    /* padding: 1em 4em; */
+    /* height: 40px; */
+    color: white;
+}
+
+.div-header {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* width: 100%; */
+    /* max-width: 1200px; */
+}
+
+.logo-navbar {
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    margin: 10px 15px;
+}
+
+.text-login {
+    font-size: 1rem;
+    color: white;
+    /* Color del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    padding: 0.5rem 1rem;
+    /* Espaciado interno */
+    background-color: rgb(23, 162, 184);
+    /* Color de fondo atractivo */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+    transition: background-color 0.3s ease, transform 0.2s;
+    /* Transiciones para fondo y transformación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+}
+
+.text-login:hover {
+    background-color: rgb(23, 162, 184);
+    /* Color de fondo al pasar el mouse */
+    transform: translateY(-1.5px);
+    /* Efecto de elevación en hover */
+}
+
+.text-login:active {
+    transform: scale(0.95);
+    /* Efecto de "clic" al presionar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Reducción de sombra al hacer clic */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.div-logo-sidebar {
+    padding: 0.3rem;
+    /* background-color: #444; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    color: rgb(23, 162, 184);
+}
+
+.nav-sidebar {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.lista-navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-lista {
+    text-align: center;
+    display: block;
+    padding: 0.8rem 3.5em;
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.text-lista:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* User section */
+.div-user {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    /* padding: 0.5rem 1rem; */
+}
+
+ul {
+    text-align: center;
+}
+
+.text-settings {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.text-settings:hover {
+    color: rgb(23, 162, 184);
+}
+
+/* Navbar Icon */
+.icon-navbar {
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+/* Estilos para el contenedor del enlace */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para el contenedor de la tarjeta */
+.story-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 35px 20px;
+    min-height: 140px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Efecto hover para dar retroalimentación al usuario */
+.story-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Estilo para el nombre de la historia */
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Estilo para la descripción de la historia */
+.description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
