@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         setIsLoading(true)
-        console.log(`${API_URL}/login`); // Esto te mostrará la URL final
+        // console.log(`${API_URL}/login`); // Esto te mostrará la URL final
 
         try {
             const response = await fetch(`${API_URL}/login`, {

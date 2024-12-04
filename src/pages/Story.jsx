@@ -226,7 +226,7 @@ export const Story = () => {
                                         <ul>
                                             {assigned.map((user) => (
                                                 <li key={user._id}>
-                                                    {user?.name?.first} {user?.name?.last}
+                                                    {user.name.first} {user.name.last}
                                                 </li>
                                             ))}
                                         </ul>
