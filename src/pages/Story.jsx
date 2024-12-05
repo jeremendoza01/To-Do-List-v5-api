@@ -20,15 +20,13 @@ export const Story = () => {
 
         // console.log('owner id pasado al hook:', ownerId);
 
-        const assignedToIds = useMemo(() => { return Array.isArray(story?.assignedTo) ? story.assignedTo.map(user => user._id) : []; }, [story]);
+        const assignedToIds = useMemo(() => story?.assignedTo || [], [story]);
 
         // console.log('Datos del propietario obtenidos:', owner);
 
-        const {
-            data: assigned,
-            loading: loadingAssigned,
-            error: fetchError,
-        } = useFetchUsersById(assignedToIds);
+        const { data: assigned, loading: loadingAssigned } = useFetchUsersById(assignedToIds);
+
+        // console.log("usuarios asignados",assigned);
         const {
             data: tasks,
             loading: loadingTasks,
@@ -217,22 +215,16 @@ export const Story = () => {
                                     </b>
 
                                     {loadingAssigned ? (
-                                        <p>Cargando asignados...</p>
-                                    ) : fetchError ? (
-                                        <p>Error al cargar los usuarios: {fetchError}</p>
-                                    ) : assigned &&
-                                        Array.isArray(assigned) &&
-                                        assigned.length > 0 ? (
-                                        <ul>
-                                            {assigned.map((user) => (
-                                                <li key={user._id}>
-                                                    {user.name.first} {user.name.last}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    ) : (
-                                        <p>No hay usuarios asignados</p>
-                                    )}
+                                    <p>Cargando asignados...</p>
+                                ) : assigned && assigned.length > 0 ? (
+                                    <ul>
+                                        {assigned.map(user => (
+                                            <li key={user._id}>{user.username}</li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p>No hay usuarios asignados</p>
+                                )}
                                 </div>
                             </div>
                             {/* TAREAS */}

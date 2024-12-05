@@ -17,7 +17,6 @@ export const AuthProvider = ({ children }) => {
 
 
     useEffect(() => {
-        // Recupera el token y los datos de usuario de localStorage al iniciar la app
         const token = localStorage.getItem('authToken');
         const storedUser = JSON.parse(localStorage.getItem('user'));
 
@@ -27,6 +26,8 @@ export const AuthProvider = ({ children }) => {
         }
         setIsLoading(false);
     }, []);
+
+
 
     const login = async (username, password) => {
         setIsLoading(true)

@@ -3,41 +3,51 @@ import { API_URL } from "../api";
 
 export const hookStories = () => {
     const getStories = async () => {
+        const token = localStorage.getItem('authToken');
+        if (!token) {
+            throw new Error('Token de autenticación no disponible');
+        }
+    
         const url = `${API_URL}/stories`;
-
-
         const resp = await fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${localStorage.getItem('authToken')}`,
-            }
+                Authorization: `Bearer ${token}`,
+            },
         });
-
-        if (!resp.ok) throw new Error('Error al obtener las historias');
-
+    
+        if (!resp.ok) {
+            const errorText = await resp.text();
+            throw new Error(`Error al obtener las historias: ${errorText}`);
+        }
+    
         const { data } = await resp.json();
-        return data || [];  // Asegura que data siempre sea un array
+        return data || [];
     };
+    
 
     const [state, setState] = useState({
-        data: [],  // Data comienza como un array vacío
-        loading: true
+        data: [],
+        loading: true,
+        error: null,
     });
-
+    
     useEffect(() => {
         const fetchStories = async () => {
             try {
                 const stories = await getStories();
-                setState({ data: stories, loading: false });
+                // console.log("Fetched stories:", stories);
+                setState({ data: stories, loading: false, error: null });
             } catch (err) {
-                console.error('Error en fetchStories:', err);
-                setState({ data: [], loading: false });
+                console.error("Error en fetchStories:", err);
+                setState({ data: [], loading: false, error: err.message });
             }
         };
-
+    
         fetchStories();
     }, []);
+    
 
     return state;
 };

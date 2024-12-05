@@ -16,6 +16,8 @@ const ProjectDetails = () => {
     const { data: members, loading: loadingMembers } = useFetchUsersById(membersIds);
     const { data: epics, loading: loadingEpics } = useFetchEpics(projectId);
 
+
+    // console.log("miembros", members);
     return (
         <>
             <NavbarLogged />

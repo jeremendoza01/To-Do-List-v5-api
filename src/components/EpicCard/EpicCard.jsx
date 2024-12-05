@@ -11,7 +11,7 @@ export const EpicCard = ({ epic }) => {
                 <p className="description-epic">
                     {epic.description}
                 </p>
-                <p className="icon-epic">Icono: {epic.icon}</p>
+                <p className="icon-epic">{epic.icon}</p>
             </div>
         </Link>
     );
