@@ -5,7 +5,7 @@ export const useFetchProjects = () => {
     const [state, setState] = useState({
         data: [],
         loading: true,
-        error: null, // Agregado para manejar errores
+        error: null,
     });
 
     const token = localStorage.getItem('authToken');
@@ -36,7 +36,7 @@ export const useFetchProjects = () => {
                 setState({
                     data: [],
                     loading: false,
-                    error: error.message, // Guardar el error para mostrarlo
+                    error: error.message,
                 });
             }
         };

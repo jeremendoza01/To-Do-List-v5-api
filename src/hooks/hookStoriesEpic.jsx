@@ -26,7 +26,7 @@ export const useFetchStoriesEpic = (epicId) => {
     useEffect(() => {
         if (!epicId) {
             console.error("No epicId provided!");
-            return; // Termina early si no se proporciona epicId
+            return;
         }
         getStoriesEpic(epicId)
             .then(epics => {

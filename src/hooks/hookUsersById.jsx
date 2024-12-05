@@ -31,26 +31,20 @@ export const useFetchUsersById = (usersIds) => {
     });
 
     useEffect(() => {
-        // console.log('IDs recibidos inicialmente:', usersIds);
-      
         const fetchMembers = async () => {
             if (!usersIds || 
                 (typeof usersIds === 'object' && !usersIds._id && !usersIds[0]?._id)) {
-                // console.log("No hay IDs de usuario válidos para consultar.");
                 setState({ data: [], loading: false, error: null });
                 return;
             }
 
             const idsToFetch = Array.isArray(usersIds) 
                 ? usersIds.map(id => id._id || id)
-                : [usersIds._id || usersIds];
-
-            // console.log("IDs a consultar procesados:", idsToFetch);
+                : [usersIds._id || usersIds];;
       
             try {
                 const members = await Promise.all(
                     idsToFetch.map(async (userIdToFetch) => {
-                        // console.log("ID a buscar específico:", userIdToFetch);
                         if (userIdToFetch) {
                             const user = await getUsersById(userIdToFetch);
                             return user;

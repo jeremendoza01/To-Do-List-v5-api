@@ -3,11 +3,11 @@ import "../pages/styles/styles-MyStories.css";
 import { StoryCard } from "../components/StoryCard/StoryCard";
 import { hookStories } from "../hooks/hookStories";
 import { useAuth } from "../auth/AuthProvider";
+
 export const MyStories = () => {
     const { user, isLoading: authLoading } = useAuth();
     const { data: storiesData, loading: loadingStories } = hookStories();
 
-    // Esperar que se carguen los datos de autenticación y las historias
     if (authLoading || loadingStories) {
         return <p>Cargando...</p>;
     }
@@ -17,7 +17,7 @@ export const MyStories = () => {
         return <p>No estás autenticado. Por favor, inicia sesión.</p>;
     }
 
-    // Filtrar las historias donde el username del propietario coincide con el del usuario
+
     const stories = storiesData?.filter((story) => {
         // Usamos username para comparar
         return story.owner?.username === user?.username;

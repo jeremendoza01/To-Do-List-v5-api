@@ -3,7 +3,6 @@ import { API_URL } from "../api";
 
 export const useFetchTasksStory = (storyId) => {
     const url = `${API_URL}/stories/${storyId}/tasks`;
-    // console.log('Fetching tasks from URL:', url); // Debug
     const [state, setState] = useState({
         data: [],
         loading: true,
@@ -11,7 +10,7 @@ export const useFetchTasksStory = (storyId) => {
 
     useEffect(() => {
         if (storyId) {
-            // console.log('Fetching tasks for storyId:', storyId); // Agregar mensaje de depuración
+            // console.log('Fetching tasks for storyId:', storyId);
             fetchTasks();
         } else {
             console.warn('No storyId provided.');
@@ -43,17 +42,10 @@ export const useFetchTasksStory = (storyId) => {
             setState({ data: [], loading: false });
         }
     };
-
-    useEffect(() => {
-        if (storyId) {
-            fetchTasks(); // Llama a fetchTasks solo si storyId está definido
-        }
-    }, [storyId]);
-
     return {
         data: state.data,
         loading: state.loading,
-        refetch: fetchTasks, // Proveer refetch para recargar las tareas
+        refetch: fetchTasks,
     };
 };
 

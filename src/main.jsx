@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-// import { ProjectProvider } from "./context/ProjectContext";
 import { AuthProvider } from './auth/AuthProvider.jsx'
 import "./index.css";
 import { token } from "./token.js";

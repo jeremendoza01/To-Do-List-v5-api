@@ -58,6 +58,9 @@ h3 {
     font-weight: 600;
 }
 
+.div-property-proyect{
+    text-align: center;
+}
 
 /* Epics list */
 .project-epics ul {

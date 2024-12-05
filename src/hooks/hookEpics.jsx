@@ -47,7 +47,7 @@ export const useFetchEpics = (projectId) => {
                 loading: false
             });
         }
-    }, [projectId]); // Agregado projectId como dependencia
+    }, [projectId]);
 
     return state;
 };

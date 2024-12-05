@@ -13,17 +13,14 @@ export const Story = () => {
     const { data: story, loading: loadingStory } = useFetchStoryById(storyId);
 
     const ownerId = useMemo(() => { const owner = story?.owner; 
-        // console.log('Propietario ID calculado:', owner);
         return owner || null; }, [story]);
 
         const { data: owner, loading: loadingOwner } = useFetchUsersById(ownerId);
 
-        // console.log('owner id pasado al hook:', ownerId);
 
         const assignedToIds = useMemo(() => story?.assignedTo || [], [story]);
 
         // console.log('Datos del propietario obtenidos:', owner);
-
         const { data: assigned, loading: loadingAssigned } = useFetchUsersById(assignedToIds);
 
         // console.log("usuarios asignados",assigned);

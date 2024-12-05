@@ -31,8 +31,6 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         setIsLoading(true)
-        // console.log(`${API_URL}/login`); // Esto te mostrará la URL final
-
         try {
             const response = await fetch(`${API_URL}/login`, {
                 method: 'POST',
@@ -64,7 +62,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, login, logout, user, isLoading }}> {/* Incluir isLoading en el contexto */}
+        <AuthContext.Provider value={{ isAuthenticated, login, logout, user, isLoading }}>
             {children}
         </AuthContext.Provider>
     );
