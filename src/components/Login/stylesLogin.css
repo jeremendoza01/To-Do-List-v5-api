@@ -93,17 +93,13 @@ label {
     /* Sin contorno */
 }
 
-/* Estilo del mensaje de error */
 .error {
     color: red;
-    /* Color rojo */
-    margin-bottom: 15px;
-    /* Espacio inferior */
-    font-size: 1.1em;
-    /* Tamaño de fuente adecuado */
+    font-size: 1em;
+    /* margin-top: 10px; */
     text-align: center;
-    /* Centrando el mensaje de error */
 }
+
 
 /* Estilo del botón de envío */
 .button-submit {
