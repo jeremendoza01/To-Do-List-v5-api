@@ -23,7 +23,7 @@ export const useFetchEpicsById = (epicId) => {
             return data;
 
         } catch (error) {
-            console.error("Error fetching epics:", error);
+            console.error("Error al encontrar las epicas:", error);
             throw error;
         }
     }

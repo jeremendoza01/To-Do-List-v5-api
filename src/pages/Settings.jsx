@@ -15,7 +15,6 @@ function Settings() {
         <>
             <NavbarLogged />
             <div className="settings-container">
-                {/* User Profile Section */}
                 <div className="profile-section">
                     <h2 className="section-title">Perfil del Usuario</h2>
                     <div className="profile-info">
@@ -25,7 +24,6 @@ function Settings() {
                     </div>
                 </div>
 
-                {/* Logout Section */}
                 <div className="logout-section">
                     <button
                         type="button"

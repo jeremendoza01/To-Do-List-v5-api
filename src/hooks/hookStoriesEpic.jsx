@@ -25,7 +25,7 @@ export const useFetchStoriesEpic = (epicId) => {
 
     useEffect(() => {
         if (!epicId) {
-            console.error("No epicId provided!");
+            // console.error("No epicId provided!");
             return;
         }
         getStoriesEpic(epicId)
@@ -36,7 +36,7 @@ export const useFetchStoriesEpic = (epicId) => {
                 });
             })
             .catch((err) => {
-                console.error("Error fetching stories:", err);
+                // console.error("Error fetching stories:", err);
                 setState({
                     data: [],
                     loading: false

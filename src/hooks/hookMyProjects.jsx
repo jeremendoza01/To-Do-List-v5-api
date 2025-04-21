@@ -32,7 +32,7 @@ export const useFetchProjects = () => {
                     error: null,
                 });
             } catch (error) {
-                console.error('Error fetching projects:', error.message);
+                console.error('Error al encontrar los proyectos: ', error.message);
                 setState({
                     data: [],
                     loading: false,
