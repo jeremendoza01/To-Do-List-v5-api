@@ -28,7 +28,6 @@ const Login = () => {
             if (err.response && err.response.status === 401) {
                 // Manejo específico para errores 401
                 setLocalError('Usuario o contraseña incorrectos. Intenta nuevamente.');
-                // navigate('/login'); // Redirigir al login (si no lo estás ya)
             } else {
                 setLocalError(err.message || 'Error al iniciar sesión');
             }
@@ -68,7 +67,7 @@ const Login = () => {
                         {isSubmitting ? 'Cargando...' : 'Iniciar sesión'}
                     </button>
 
-                    {isSubmitting && <div className="spinner">...</div>} {/* Agregar spinner aquí */}
+                    {isSubmitting && <div className="spinner">...</div>}
                 </form>
             </div>
         </>
